@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Species</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Lab Group 2-B: Deron Foo">
+    <meta name="description" content="A website design prototype with future functions namely to identify Endangered, Rare and Threatened (ERT) plants through an automatic visual identification engine. In addition, the web application will also integrate a function akin to a plant encyclopedia, enabling users to explore encountered plant species">
+    <meta name="keywords" content="Botany Maven, Plant Encyclopedia, ERT, Botany Identification, Families">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="icon" href="photos/homepage/favicon.png" type="image/png"> <!-- Define website favicon -->
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="hamburger_menu" id="sidebar_menu">
+        <label for="sidebar_menu"><img src="photos/homepage/hamburger_menu.png" alt="Hamburger menu icon"></label>
+        <!-- checkbox used for hamburger menu toggles (control the visibility of the sidebar menu) -->
+        <a href="index.html" id="logo"><img src="photos/homepage/logo.png" alt="Website logo"></a>
+        <nav>
+            <div class="navbar">
+                <a class="navbarBtn" href="identify.html">Identify</a>
+                <div class="navRow">
+                    <!-- Dropdown menu content arrangements -->
+                    <div class="navCol column1">
+                        <h2>Flora<br>Identification</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Upload photo</li>
+                            <li>Identify plant types</li>
+                            <li>Scientific & common names</li>
+                            <li>Plant care tips</li>
+                            <li>Appropriate environment</li>
+                            <li>Main plant locations</li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg1">
+                    </div><!-- Background image in style.css for each dropdown option -->
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="families.html">Explore</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Flora<br>Exporation</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Explore the plant by navigating through three areas for more information: </li>
+                            <li><a href="families.html">Families</a></li>
+                            <li><a href="genera.html">Genera</a></li>
+                            <li><a href="species.html">Species</a></li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg2">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="contributor.html">Contributions</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Flora<br>Contributions</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Card display of plants</li>
+                            <li>User-uploaded photos</li>
+                            <li>Name of the plants</li>
+                            <li>Name of the contributors</li>
+                            <li>User comments</li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg3">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="enquiry.html">Enquiry</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Flora<br>Enquiries</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>User details</li>
+                            <li>Make inquiries about plants based on seven families:</li>
+                            <li>~ Dipterocarpaceae&nbsp;&nbsp;&nbsp; ~ Lauraceae</li>
+                            <li>~ Burseraceae&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~ Myristicaceae</li>
+                            <li>~ Chrysobalanaceae&nbsp;&nbsp; ~ Meliaceae </li>
+                            <li>~ Ebenaceae</li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg4">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="enhancement1.html">Enhancements</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Website<br>Enhancements</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Sticky Dropdown Navigation + Hamburger</li>
+                            <li>Fluid Layout: Mobile & Tablet Adaptation</li>
+                            <li>Card Flipping Animation on Mouseover </li>
+                            <li>Embedded YouTube video</li>
+                            <li>Embedded Google map</li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg5">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="#">About Us</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Website<br>Developers</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Meet our software developers:</li>
+                            <li><a href="profile1.html">Deron Foo</a></li>
+                            <li><a href="profile2.html">Esther Chai</a></li>
+                            <li><a href="profile3.html">Liew Mei Qi</a></li>
+                            <li><a href="profile4.html">Beh Jia Yi</a></li>
+                            <li><a href="profile5.html">Lai Jun Hong</a></li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg6">
+                    </div>
+                </div>
+            </div>
+            <a href="" class="icon"><img src="photos/homepage/search.png" alt="Search icon"></a>
+            <!-- search icon obtained from https://www.flaticon.com/free-icon/magnifying-glass_49116?term=search&page=1&position=16&origin=tag&related_id=49116 -->
+            <a href="" class="icon"><img src="photos/homepage/user.png" alt="User account icon"></a>
+            <!-- account icon obtained from https://www.flaticon.com/free-icon/user_1077114?term=account&page=1&position=3&origin=search&related_id=1077114 -->
+        </nav>
+        <div id="hamburgerNav">
+        <!-- Hamburger navigational menu that will only show up when clicked on under minimized screen/mobile view -->
+            <ul>
+                <li><a href="identify.html">Flora Identification<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="families.html">Explore - Families<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="genera.html">Explore - Genera<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="species.html">Explore - Species<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="contributor.html">Flora Contributions<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="enquiry.html">Flora Enquiries<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="enhancement1.html">Website Enhancements<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile1.html">Dev - Deron Foo<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile2.html">Dev - Esther Chai<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile3.html">Dev - Liew Mei Qi<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile4.html">Dev - Beh Jia Yi<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile5.html">Dev - Lai Jun Hong<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <!-- arrow icon obtained from https://www.flaticon.com/free-icon/right-arrow_271228?term=arrow&page=1&position=1&origin=tag&related_id=271228 -->
+            </ul>
+        </div>
+    </header>
+    <section>
+        <article class="species">
+            <h1>Species</h1>
+            <p>Discover thousands of species allocated around the globe.</p>
+        </article>
+    </section>
+    <section class="genera-header">
+        <h1 id="vatica-species">Dipterocarpaceae: Vatica: Species</h1>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/chinensis.jpg" alt="Image of Chinensis">
+            <!-- Image obtained from https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Vatica_chinensis-5.JPG/330px-Vatica_chinensis-5.JPG -->
+            <figcaption><em>Chinensis Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Chinensis</h2>
+            <p>                    
+                Vatica chinensis, a critically endangered tree, is native to the Western Ghats in southern India and was historically found in Sri Lanka but is now rare or possibly extinct there. It is part of the South Western Ghats montane rainforests and is a tropical evergreen tree growing up to 25 meters tall. Its leaves are simple and alternate, and its white flowers are bisexual and arranged in clusters. The fruits are capsules with a tough outer covering and a persistent calyx.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#diptero-family">Families</a></p>
+                <p><a href="Genera.html#diptero-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/rassak.jpg" alt="Image of Rassak">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/700746/medium.JPG -->
+            <figcaption><em>Rassak Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Rassak</h2>
+            <p>                    
+                Vatica rassak, a tree in the Dipterocarpaceae family native to Maritime Southeast Asia, can grow up to 30 meters tall with a trunk diameter of 70 cm. Its leathery leaves are elliptic to oblong, reaching up to 32 cm in length, and it produces cream-colored flowers. In Borneo, a newly discovered caterpillar uses the tree's toxic resin to make its cocoon. This species is found in various regions, including Borneo, Java, the Maluku Islands, Sulawesi, New Guinea, and the Philippines, typically in lowland dipterocarp forests and along rivers, up to 400 meters in altitude.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#diptero-family">Families</a></p>
+                <p><a href="Genera.html#vatica-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/mangachapoi.jpg" alt="Image of Mangachapoi">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/85632409/medium.jpg -->
+            <figcaption><em>Mangachapoi Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Mangachapoi</h2>
+            <p>                    
+                Vatica mangachapoi is a species of plant in the family Dipterocarpaceae. It is a tree found in the Malesia and Indochina floristic regions: including Brunei, eastern China (Hainan Island), Malaysia, the Philippines, Thailand, and Vietnam
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#diptero-family">Families</a></p>
+                <p><a href="Genera.html#diptero-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container-bottom">
+        <figure class="species-img">
+            <img src="photos/species/diospyroides.jpg" alt="Image of Diospyroides">
+            <!-- Image obtained from https://upload.wikimedia.org/wikipedia/commons/e/e0/Gardenology.org-IMG_7525_qsbg11mar.jpg -->
+            <figcaption><em>Diospyroides Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Diospyroides</h2>
+            <p>                    
+                Vatica diospyroides is a species of plant in the family Dipterocarpaceae. It is a tree found in Malaysia, Thailand, and Vietnam. It is a critically endangered species threatened by habitat loss.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#diptero-family">Families</a></p>
+                <p><a href="Genera.html#diptero-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="genera-header">
+        <h1 id="carpus-species">Dipterocarpaceae: Dipterocarpus: Species</h1>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/alatus.jpg" alt="Image of Alatus">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/212741669/medium.jpeg -->
+            <figcaption><em>Alatus Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Alatus</h2>
+            <p>                    
+                Dipterocarpus alatus is a tall tree pollinated by insects, with wind-dispersed seeds. Dipterocarpus alatus ranges from West Bengal and Bangladesh through Myanmar, Thailand, Laos, Cambodia, and Vietnam, along with Peninsular Malaysia and the Philippines. It plays a crucial role in reforestation near rivers. In Cambodia, its wood is valued for construction and resin for various uses, including traditional medicine. Myanmar boasts a significant specimen in Kengtung.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#diptero-family">Families</a></p>
+                <p><a href="Genera.html#carpus-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/retusus.jpg" alt="Image of Retusus">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/23101000/medium.jpeg -->
+            <figcaption><em>Retusus Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Retusus</h2>
+            <p>                    
+                Dipterocarpus retusus, also known as <strong>Hollong</strong>, is a large tree native to several Asian countries, including Malaysia, China, Vietnam, Cambodia, and India. It grows up to 30 meters tall and is valued for its timber and resin. In Cambodia, the resin is collected to make torches and candles, while the wood is used in construction.
+            </p>
+            <div class="flex">
+                <div class="plant-buttons"> 
+                    <p><a href="Families.html#diptero-family">Families</a></p>
+                    <p><a href="Genera.html#carpus-genera">Genera</a></p>
+                </div>
+                <aside class="add-info">
+                    <p>
+                        <strong>Hollong: </strong> the state tree of Assam and Arunachal Pradesh, India. In India, the timber is used for plywood and making various containers. In China, the timber is used in construction. Hollong is a sacred tree for Moran community of Assam.
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section class="species-container-bottom">
+        <figure class="species-img">
+            <img src="photos/species/obtusifolius.jpg" alt="Image of Obtusifolius">
+            <!-- Image obtained from https://upload.wikimedia.org/wikipedia/commons/e/e0/Gardenology.org-IMG_7525_qsbg11mar.jpg -->
+            <figcaption><em>Obtusifolius Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Obtusifolius</h2>
+            <p>                    
+                Dipterocarpus obtusifolius is a common tree in Southeast Asia, including Malaysia. It has three identified varieties and grows up to 30m tall in dry dipterocarp forests. The red-brown wood is used in construction. In Cambodia, it's used for torches, obtaining drinking water, and making less durable boards. It's also a significant source of firewood in some areas of Kompong Chhnang Province.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#diptero-family">Families</a></p>
+                <p><a href="Genera.html#carpus-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="genera-header">
+        <h1 id="hopea-species">Dipterocarpaceae: Hopea: Species</h1>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/bilitonensis.jpg" alt="Image of Bilitonensis">
+            <!-- Image obtained from https://d2seqvvyy3b8p2.cloudfront.net/a55d4defe3df22a589c8f1ff22d9718d.jpg -->
+            <figcaption><em>Bilitonensis Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Bilitonensis</h2>
+            <p>                    
+                Hopea bilitonensis, also known as Merawan Batu Kapur, is a small tree with smooth bark and stilt roots. It belongs to the Dipterocarpaceae family and is found in limestone hills in the Northwest of Peninsular Malaysia. However, its distribution is limited, and it faces a critical threat due to the loss of its limestone habitats, leading to its classification as Critically Endangered in Malaysia.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#diptero-family">Families</a></p>
+                <p><a href="Genera.html#hopea-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/griffithii.jpg" alt="Image of Griffithii">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/1448315/medium.jpg -->
+            <figcaption><em>Griffithii Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Griffithii</h2>
+            <p>                    
+                Hopea griffithii, a tall canopy tree with smooth bark, is native to southern Myanmar, southern Thailand, Peninsular Malaysia, Singapore, and Borneo. It thrives in mixed dipterocarp forests, typically at elevations of up to 500 meters. Regrettably, this species is classified as endangered on the IUCN Red List due to the ongoing threats of land conversion for agriculture and logging. Fortunately, there are some protected areas, particularly in Sarawak, where efforts are made to safeguard its existence.
+            </p>
+            <div class="flex">
+                <div class="plant-buttons"> 
+                    <p><a href="Families.html#diptero-family">Families</a></p>
+                    <p><a href="Genera.html#hopea-genera">Genera</a></p>
+                </div>
+                <aside class="add-info">
+                    <p>
+                        <strong>Name Origin: </strong> Hopea Griffithii is named for the British doctor and naturalist William Griffith.
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section class="species-container-bottom">
+        <figure class="species-img">
+            <img src="photos/species/odorata.jpg" alt="Image of Odorata">
+            <!-- Image obtained from https://upload.wikimedia.org/wikipedia/commons/e/e0/Gardenology.org-IMG_7525_qsbg11mar.jpg -->
+            <figcaption><em>Odorata Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Odorata</h2>
+            <p>                    
+                Hopea odorata, also known as ta-khian in Thai, is a type of plant belonging to the Dipterocarpaceae family. This plant species can be found in various countries, including Bangladesh, Cambodia, India, Laos, Malaysia, Myanmar, Thailand, and Vietnam. It typically grows as a large tree, reaching heights of up to 45 meters and having a trunk base diameter of about 4.5 meters. These trees thrive in forested areas, particularly close to rivers, at altitudes ranging from sea level up to 600 meters. In certain regions like West Bengal and the Andaman Islands, it is frequently cultivated as a shade tree. Due to its valuable wood, Hopea odorata is considered a threatened species in its native habitat.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#diptero-family">Families</a></p>
+                <p><a href="Genera.html#hopea-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="genera-header">
+        <h1 id="acti-species">Lauraceae: Actinodaphne: Species</h1>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/fragilis.jpg" alt="Image of Fragilis">
+            <!-- Image obtained from https://d2seqvvyy3b8p2.cloudfront.net/f253326a64ab5f386e498b8fa3938245.jpg -->
+            <figcaption><em>Fragilis Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Fragilis</h2>
+            <p>                    
+                Actinodaphne fragilis is a distinctive and noteworthy plant species within the Lauraceae family, and it boasts a special connection to Peninsular Malaysia as it is exclusively found within this region. This tree, known for its unique characteristics and ecological significance, contributes to the rich biodiversity of Peninsular Malaysia's flora. Actinodaphne fragilis is a testament to the natural beauty and botanical diversity that thrives within this lush and ecologically significant part of the world.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#laura-family">Families</a></p>
+                <p><a href="Genera.html#laura-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/pruinosa.jpg" alt="Image of Pruinosa">
+            <!-- https://inaturalist-open-data.s3.amazonaws.com/photos/1475610/medium.jpeg -->
+            <figcaption><em>Pruinosa Genus</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Pruinosa</h2>
+            <p>                    
+                Actinodaphne pruinosa is a tree species belonging to the Lauraceae family. It typically reaches heights of 18 to 20 meters. This plant is indigenous to several regions, including Peninsular Malaysia, Singapore, and Borneo. It can be found in a variety of forest types, including primary and secondary lowland and montane rainforests, as well as peat swamp and kerangas forests. It exhibits a wide altitudinal range, growing between 90 to 4,000 meters above sea level.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#laura-family">Families</a></p>
+                <p><a href="Genera.html#laura-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container-bottom">
+        <figure class="species-img">
+            <img src="photos/species/johorensis.jpg" alt="Image of Johorensis">
+            <!-- Image obtained from  -->
+            <figcaption><em>Johorensis Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Johorensis</h2>
+            <p>                    
+                Actinodaphne johorensis, a plant species belonging to the Lauraceae family, holds a special place in the botanical landscape of Peninsular Malaysia as it is found nowhere else in the world. This endemism makes it a unique and valuable component of the local flora. However, the survival of Actinodaphne johorensis is currently under threat due to the ongoing loss of its natural habitat. As urbanization and land development continue to encroach upon its native range, this plant faces a precarious future.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#laura-family">Families</a></p>
+                <p><a href="Genera.html#laura-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="genera-header">
+        <h1 id="litsea-species">Lauraceae: Litsea: Species</h1>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/cubeba.jpg" alt="Image of Cubeba">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/1838306/medium.JPG -->
+            <figcaption><em>Cubeba Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Cubeba</h2>
+            <p>                    
+                Litsea cubeba, a tree native to regions like Southern China and Southeast Asia, plays a vital role in the production of lemony essential oil, which is widely used in various applications including fragrance creation, flavor enhancement, and chemical synthesis. Beyond its economic significance, this versatile tree also contributes to the craft industry, with its timber being utilized in the production of furniture and artisanal items. Moreover, various parts of the Litsea cubeba plant hold medicinal value and are used in traditional remedies and herbal treatments.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#laura-family">Families</a></p>
+                <p><a href="Genera.html#litsea-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/claviflora.jpg" alt="Image of Claviflora">
+            <!-- Image obtained from https://d2seqvvyy3b8p2.cloudfront.net/44df05e5ca3f9c62cc1a16ee81d71faa.jpg -->
+            <figcaption><em>Claviflora Genus</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Claviflora</h2>
+            <p>                    
+                Litsea claviflora is a unique tree native exclusively to Peninsular Malaysia, belonging to the Lauraceae family. Within the Lauraceae family, it represents the diverse genus Litsea, which includes various evergreen and deciduous trees and shrubs found in tropical and subtropical regions of North America and Asia. These plants are often dioecious, with aromatic leaves and inconspicuous flowers of varying colors. The species' endemism highlights its ecological importance in Peninsular Malaysia, emphasizing the need for conservation efforts to protect both the tree and its habitat.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#laura-family">Families</a></p>
+                <p><a href="Genera.html#litsea-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container-bottom">
+        <figure class="species-img">
+            <img src="photos/species/curtisii.jpg" alt="Image of Curtisii">
+            <!-- Image obtained from https://d2seqvvyy3b8p2.cloudfront.net/a678992d5e4c843860ef5c70b4f9968f.jpg -->
+            <figcaption><em>Curtisii Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Curtisii</h2>
+            <p>                    
+                Litsea curtisii, a member of the Lauraceae family, is a tree species that exclusively thrives in the unique ecosystem of Peninsular Malaysia. This endemism highlights its special significance within the region's botanical diversity. As part of the Lauraceae family, Litsea curtisii adds to the rich tapestry of plant life found in this family, which encompasses a wide range of species worldwide. This tree's exclusive presence in Peninsular Malaysia underscores its ecological importance and underscores the need for conservation efforts to protect both the species and its native habitat.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#laura-family">Families</a></p>
+                <p><a href="Genera.html#litsea-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="genera-header">
+        <h1 id="beil-species">Lauraceae: Beilschmiedia: Species</h1>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/berteroana.jpg" alt="Image of Berteroana">
+            <!-- Image obtained from https://static.inaturalist.org/photos/19329722/medium.jpg -->
+            <figcaption><em>Berteroana Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Berteroana</h2>
+            <p>                    
+                This tree can reach 30 meters in height and one meter in trunk diameter. It has a straight, branched trunk with gray bark. The leaves are elliptical to ovate-elliptical, glossy green on top and glaucous beneath, about 3–7.5 cm long and 2–4 cm wide, with short pubescent petioles. Its hermaphrodite flowers are greenish-yellow and found in 5–6 cm long inflorescences. The edible fruit is a green, round drupe with a single seed, about 1.5–2 cm in diameter and pointed at the apex.
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#laura-family">Families</a></p>
+                <p><a href="Genera.html#beil-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/elliptica.jpg" alt="Image of Elliptica">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/23052905/medium.jpg -->
+            <figcaption><em>Elliptica Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Elliptica</h2>
+            <p>                    
+                Beilschmiedia elliptica is a large tree with a reddish-brown or grey trunk, reaching up to 30 meters in height and 90 cm in diameter. It has hairy shoots and elliptic leaves (8-10 cm long). Cream flowers bloom in panicles from August to October, followed by black, 12 mm long drupes with a single seed. Removing the fleshy aril aids seed germination. Birds like the rose-crowned fruit dove, topknot pigeon, and white-headed pigeon eat its fruit.
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#laura-family">Families</a></p>
+                <p><a href="Genera.html#beil-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container-bottom">
+        <figure class="species-img">
+            <img src="photos/species/obtusifolia.jpg" alt="Image of Obtusifolia">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/41292002/medium.jpg -->
+            <figcaption><em>Obtusifolia Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Obtusifolia</h2>
+            <p>                    
+                Beilschmiedia obtusifolia is a medium to large tree with a brown or creamy trunk, hairy shoots, and elliptic leaves. It produces cream-colored, unpleasant-smelling flowers from October to November, followed by black egg-shaped fruit with a scented green aril from December to July. Birds, including pigeons and doves, eat its fruits. 
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#laura-family">Families</a></p>
+                <p><a href="Genera.html#beil-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="genera-header">
+        <h1 id="dacryo-species">Burseraceae: Dacryodes: Species</h1>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/costata.jpg" alt="Image of Costata">
+            <!-- Image obtained from https://v3.boldsystems.org/pics/_w300/PLID/XM_0324_I_2%2B1448038972.JPG -->
+            <figcaption><em>Costata Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Costata</h2>
+            <p>                    
+                Dacryodes costata is a tall tree in the Burseraceae family, known for its ribbed leaves. It can grow up to 45 meters tall with a smooth to flaky grey-brown bark, white flowers, and small ellipsoid fruits. This species is native to Sumatra, Peninsular Malaysia, Singapore, Borneo, and the Philippines.
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#bursera-family">Families</a></p>
+                <p><a href="Genera.html#bursera-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/rostrata.jpg" alt="Image of Rostrata">
+            <!-- Image obtained from https://upload.wikimedia.org/wikipedia/commons/1/1b/Buah_Kumbayau_180331.JPG -->
+            <figcaption><em>Rostrata Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Rostrata</h2>
+            <p>                    
+                Dacryodes rostrata is a tall tree in the Burseraceae family known for its narrow-tipped leaves. It can reach 45 meters in height with a trunk diameter of up to 200 centimeters. The bark is dark grey, and its fruits are oblong, turning blue when ripe and measuring up to 3.5 cm in length.
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#bursera-family">Families</a></p>
+                <p><a href="Genera.html#bursera-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container-bottom">
+        <figure class="species-img">
+            <img src="photos/species/rugosa.jpg" alt="Image of Rugosa">
+            <!-- Image obtained from https://www.researchgate.net/publication/333042051/figure/fig4/AS:757943544856577@1557719231701/Dacryodes-rugosa-var-rugosa-A-Upper-surfaces-of-the-leaflets-bullate-B-Lower.jpg -->
+            <figcaption><em>Rugosa Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Rugosa</h2>
+            <p>                    
+                Dacryodes rugosa is a tree in the Burseraceae family, named for its wrinkled leaflets ("rugosa" from Latin). It is found in Sumatra, Peninsular Malaysia, Java, and Borneo, primarily in lowland to hill mixed dipterocarp forests, ranging from sea-level to 900 meters in altitude.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#bursera-family">Families</a></p>
+                <p><a href="Genera.html#bursera-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="genera-header">
+        <h1 id="canarium-species">Burseraceae: Canarium: Species</h1>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/patentinervium.jpg" alt="Image of Patentinervium">
+            <!-- Image obtained from https://www.natureloveyou.sg/Canarium%20patentinervium/DSC09085%20(12).jpg -->
+            <figcaption><em>Patentinervium Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Patentinervium</h2>
+            <p>                    
+                Canarium patentinervium is a tropical Asian tree in the Burseraceae family. Its specific name, "patentinervium," means "spreading nerves" in Latin, referring to its leaf veins. This tree grows as an understory, reaching up to 24 meters (80 ft) in height with a 25 cm (10 in) trunk diameter. It has smooth grey bark, brownish twigs, and produces ellipsoid fruits up to 6.5 cm (3 in) long.
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#bursera-family">Families</a></p>
+                <p><a href="Genera.html#patent-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/pilosum.jpg" alt="Image of Pilosum subsp. Borneensis">
+            <!-- Image obtained from https://www.natureloveyou.sg/Canarium%20pilosum/DSC02157%20(11).jpg -->
+            <figcaption><em>Pilosum subsp. Borneensis Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Pilosum subsp. Borneensis</h2>
+            <p>                    
+                Canarium pilosum subsp. borneensis is a tree belonging to the Burseraceae family and is a subspecies of Canarium pilosum. It is named after its native habitat, Borneo. This subspecies is exclusively found in Borneo and is not very common.
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#bursera-family">Families</a></p>
+                <p><a href="Genera.html#patent-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container-bottom">
+        <figure class="species-img">
+            <img src="photos/species/odontophyllum.jpg" alt="Image of Odontophyllum">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/41292002/medium.jpg -->
+            <figcaption><em>Odontophyllum Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Odontophyllum</h2>
+            <p>                    
+                Canarium odontophyllum is a fruit-bearing tree native to Borneo, known as dabai in Sarawak and kembayau in Sabah and Brunei. Its prized fruit, with glossy black skin and yellow flesh, has led to the annual Pesta Dabai festival in Sarawak. The tree grows up to 40-50 meters and produces edible seeds similar to almonds or pistachios.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#bursera-family">Families</a></p>
+                <p><a href="Genera.html#patent-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="genera-header">
+        <h1 id="santiria-species">Burseraceae: Santiria: Species</h1>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/apiculata.jpg" alt="Image of Apiculata">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/1471235/original.jpg -->
+            <figcaption><em>Apiculata Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Apiculata</h2>
+            <p>                    
+                Santiria apiculata is a tree usually growing 6 - 20 metres tall with some specimens to 40 metres. The bole can be 30 - 60cm in diameter, occasionally to 100cm. The tree is harvested from the wild for local use of its wood. The plant is classified as 'Least Concern' in the IUCN Red List of Threatened Species(2011). It ranges across countries in Southeast Asia such as Malaysia, Indonesia, and Philippines.
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#bursera-family">Families</a></p>
+                <p><a href="Genera.html#apicu-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container">
+        <figure class="species-img">
+            <img src="photos/species/tomentosa.jpg" alt="Image of Tomentosa">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/269524451/medium.jpeg -->
+            <figcaption><em>Tomentosa Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Tomentosa</h2>
+            <p>                    
+                Santiria tomentosa is a species of plant in the family Burseraceae. It is found in Indonesia, Malaysia, the Philippines, and Singapore. It's upper canopy tree can grow up to 50 m tall and 86 cm dbh. Leaves are alternate, compound, penni-veined, densly hairy on petiole and lower leaf surface. Flowers are 2.5 mm in diameter, pale green, placed in panicles while the fruits are 17 mm long, purple, have fleshy drupes with oblique base.
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#bursera-family">Families</a></p>
+                <p><a href="Genera.html#apicu-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="species-container-bottom">
+        <figure class="species-img">
+            <img src="photos/species/rubiginosa.jpg" alt="Image of Rubiginosa">
+            <!-- Image obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/1471236/medium.jpg -->
+            <figcaption><em>Rubiginosa Species</em></figcaption>
+        </figure>
+        <div class="species-info">
+            <h2>Rubiginosa</h2>
+            <p>                    
+                Santiria rubiginosa is a tree usually growing up to 30 metres tall, occasionally to 45 metres. The buttressed bole can be 65cm in diameter. The tree is harvested from the wild for its wood, which is a source of 'kedondong' timber, and is used locally and also exported.It ranges from Malaysia, Indonesia, to New Guinea.
+            </p>
+            <div class="plant-buttons"> 
+                <p><a href="Families.html#bursera-family">Families</a></p>
+                <p><a href="Genera.html#apicu-genera">Genera</a></p>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br>
+    <footer>
+        <div class="footer_container">
+            <section class="footer_section1">
+                <h3>Contact Us</h3>
+                <p>Phone Number:<a href="tel:6016123456"><em> +6016123456</em></a></p>
+                <p>Email Address:<a href="mailto:botanymaven123@gmail.com"><em> botanymaven123@gmail.com</em></a></p>
+            </section>
+            <section class="footer_section2">
+                <h3>Address</h3>
+                <p><em>Lot 125, Ground Floor,</em></p>
+                <p><em>Jalan Pisang Goreng,</em></p>
+                <p><em>93100, Kuching,</em></p>  
+                <p><em>Sarawak.</em></p>  
+            </section>
+            <section>
+                <h3>Follow Us</h3>
+                <table>
+                    <tr>
+                        <td><svg class="footer_icon" width="29" height="24">
+                            <path d="m14.102 6.384.062 1.038-1.05-.127C9.297 6.808 5.96 5.155 3.128 2.38L1.742 1.003 1.385 2.02c-.755 2.267-.273 4.66 1.3 6.27.84.89.652 1.018-.796.488-.505-.17-.946-.296-.988-.233-.147.15.357 2.076.756 2.84.545 1.058 1.658 2.096 2.875 2.71l1.028.488-1.216.02c-1.175 0-1.217.022-1.09.467.418 1.377 2.076 2.84 3.923 3.475l1.3.444-1.132.677a11.815 11.815 0 0 1-5.624 1.568c-.944.02-1.72.106-1.72.17 0 .21 2.56 1.398 4.05 1.864 4.47 1.376 9.78.783 13.766-1.57 2.833-1.672 5.666-5 6.988-8.22.713-1.715 1.426-4.85 1.426-6.354 0-.975.063-1.102 1.24-2.267.69-.68 1.342-1.42 1.467-1.632.21-.403.19-.403-.88-.043-1.785.636-2.036.55-1.155-.402.65-.678 1.427-1.907 1.427-2.267 0-.063-.316.042-.673.233-.377.21-1.217.53-1.846.72l-1.132.36-1.03-.7c-.565-.38-1.363-.805-1.782-.932-1.07-.296-2.707-.254-3.673.085-2.623.953-4.28 3.41-4.09 6.1z" fill="#FFFFFF"></path>
+                        </svg></td>
+                        <td>&nbsp; <a href="">Twitter</a></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;<svg class="footer_icon" width="12" height="24">
+                            <path d="M7.446 24V12h3.313l.438-4.137H7.446l.006-2.07c0-1.08.103-1.657 1.652-1.657h2.07V0H7.863c-3.98 0-5.38 2.006-5.38 5.38v2.483H0V12h2.48v12h4.966z" fill="#FFFFFF"></path>
+                        </svg></td>
+                        <td>&nbsp; <a href="">Facebook</a></td>
+                    </tr>
+                    <tr>
+                        <td><svg class="footer_icon" width="26" height="24">
+                            <path d="M12.138 15.92c-2.206 0-3.994-1.776-3.994-3.967 0-2.19 1.788-3.967 3.994-3.967 2.205 0 3.993 1.776 3.993 3.967 0 2.19-1.787 3.967-3.992 3.967m0-10.078c-3.398 0-6.153 2.736-6.153 6.11 0 3.376 2.755 6.112 6.153 6.112 3.397 0 6.152-2.736 6.152-6.11 0-3.376-2.755-6.112-6.152-6.112" fill="#FFFFFF"></path>
+                            <path d="M21.89 16.762c-.053 1.16-.25 1.79-.413 2.21a3.684 3.684 0 0 1-.896 1.368 3.682 3.682 0 0 1-1.376.89c-.423.163-1.057.357-2.225.41-1.264.057-1.643.07-4.842.07-3.2 0-3.58-.013-4.842-.07-1.168-.053-1.802-.247-2.225-.41a3.714 3.714 0 0 1-1.376-.89 3.686 3.686 0 0 1-.896-1.368c-.164-.42-.36-1.05-.413-2.21-.058-1.255-.07-1.63-.07-4.81 0-3.177.012-3.553.07-4.808.053-1.16.25-1.79.413-2.21.217-.555.477-.952.896-1.368.42-.417.818-.675 1.377-.89.424-.163 1.058-.357 2.226-.41 1.264-.057 1.642-.07 4.842-.07l4.84.07c1.17.056 1.803.247 2.226.41.56.215.958.473 1.377.89.42.416.68.813.897 1.368.164.42.36 1.05.413 2.21.058 1.255.07 1.63.07 4.81 0 3.177-.012 3.553-.07 4.808m2.156-9.716c-.058-1.266-.26-2.13-.556-2.888a5.83 5.83 0 0 0-1.382-2.108A5.876 5.876 0 0 0 19.986.677c-.763-.294-1.633-.495-2.91-.553C15.8.066 15.392.052 12.14.052c-3.254 0-3.662.014-4.94.072-1.276.058-2.146.26-2.908.553A5.877 5.877 0 0 0 2.167 2.05 5.83 5.83 0 0 0 .785 4.158C.49 4.915.287 5.78.23 7.046.17 8.316.155 8.72.155 11.953S.17 15.59.23 16.86c.057 1.266.26 2.13.555 2.888a5.83 5.83 0 0 0 1.382 2.108A5.877 5.877 0 0 0 4.29 23.23c.762.293 1.632.494 2.908.552 1.278.058 1.686.072 4.94.072 3.253 0 3.66-.014 4.94-.072 1.275-.058 2.145-.26 2.908-.553a5.876 5.876 0 0 0 2.122-1.374 5.83 5.83 0 0 0 1.382-2.108c.296-.757.498-1.622.556-2.888.06-1.27.073-1.675.073-4.907s-.015-3.637-.074-4.907" fill="#FFFFFF"></path>
+                            <path d="M19.97 5.6c0 .79-.643 1.428-1.437 1.428s-1.438-.64-1.438-1.428c0-.788.644-1.428 1.438-1.428.794 0 1.438.64 1.438 1.428" fill="#FFFFFF"></path>
+                        </svg></td>
+                        <td>&nbsp; <a href="">Instagram</a></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <div class="acknowledgement">
+            <h3>Acknowledgements</h3>
+            <table>
+                <tr>
+                    <td><a href="https://www.freepik.com/free-photo/agronomist-expert-examining-corn-leaf-looking-disease-indicator_11134023.htm?query=botanical%20identification&position=8&from_view=keyword&track=ais#position=8&query=botanical%20identification" target="_blank">Flora Identification (navImg)</a></td>
+                    <td><a href="https://www.freepik.com/free-photo/woman-moody-nature-photo-aesthetic-greenhouse_18117343.htm#query=explore%20plants&position=47&from_view=search&track=ais" target="_blank">Flora Exploration (navImg)</a></td>
+                    <td><a href="https://www.freepik.com/free-photo/woman-taking-snapshot-her-plant-social-media_17430697.htm#query=plants%20photo%20sharings&position=7&from_view=search&track=ais" target="_blank">Flora Contributions (navImg)</a></td>
+                    <td><a href="https://www.freepik.com/free-photo/happily-gardener-man-use-smartphone-laptop-computer-while-online-tutorial-potted-plans-shop_18685208.htm#query=question%20about%20plant&position=37&from_view=search&track=ais" target="_blank">Flora Enquiries (navImg)</a></td>
+                    <td><a href="https://www.freepik.com/free-photo/female-florist-using-laptop-with-potted-plants-desk_3180761.htm#query=software%20about%20plants&position=2&from_view=search&track=ais" target="_blank">Website Enhancements (navImg)</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.freepik.com/free-photo/team-coworkers-looking-green-screen-template-laptop-working-with-isolated-mockup-display-business-collaboration-partnership-people-sitting-coworking-office-with-copyspace_44988952.htm#query=green%20software%20teams&position=29&from_view=search&track=ais" target="_blank">Website Developers (navImg)</a></td>
+                    <td><a href="https://www.flaticon.com/free-icon/magnifying-glass_49116?term=search&page=1&position=16&origin=tag&related_id=49116" target="_blank">Search Icon (navImg)</a></td>
+                    <td><a href="https://www.flaticon.com/free-icon/user_1077114?term=account&page=1&position=3&origin=search&related_id=1077114" target="_blank">Account Icon (navImg)</a></td>
+                    <td><a href="https://www.flaticon.com/free-icon/right-arrow_271228?term=arrow&page=1&position=1&origin=tag&related_id=271228" target="_blank">Arrow Icon (navImg)</a></td>
+                    <td><a href="https://png.pngitem.com/pimgs/s/160-1604057_menu-free-download-and-svg-menu-icon-hd.png" target="_blank">Hamburger Icon (navImg)</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><a href="https://www.freepik.com/free-photo/peace-lily-plant-pot_18097452.htm#query=plant%20pots&position=35&from_view=search&track=ais" target="_blank">Enquiry Form Image</a></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <h3>Website Showcase</h3>
+            <a href="https://www.youtube.com" target="_blank">https://www.youtube.com</a>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2023 Botany Maven. All Rights Reserved.</p></div>
+    </footer>
+</body>
+</html>

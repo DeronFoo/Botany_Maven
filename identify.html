@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Botany Maven - Plant Identification</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Lab Group 2-B: Mei Qi">
+    <meta name="description" content="Plant Identification">
+    <meta name="keywords" content="Botany Maven, Plant Identification">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="icon" href="photos/homepage/favicon.png" type="image/png"> <!-- Define website favicon -->
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="hamburger_menu" id="sidebar_menu">
+        <label for="sidebar_menu"><img src="photos/homepage/hamburger_menu.png" alt="Hamburger menu icon"></label>
+        <!-- checkbox used for hamburger menu toggles (control the visibility of the sidebar menu) -->
+        <a href="index.html" id="logo"><img src="photos/homepage/logo.png" alt="Website logo"></a>
+        <nav>
+            <div class="navbar">
+                <a class="navbarBtn" href="identify.html">Identify</a>
+                <div class="navRow">
+                    <!-- Dropdown menu content arrangements -->
+                    <div class="navCol column1">
+                        <h2>Flora<br>Identification</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Upload photo</li>
+                            <li>Identify plant types</li>
+                            <li>Scientific & common names</li>
+                            <li>Plant care tips</li>
+                            <li>Appropriate environment</li>
+                            <li>Main plant locations</li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg1">
+                    </div><!-- Background image in style.css for each dropdown option -->
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="families.html">Explore</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Flora<br>Exporation</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Explore the plant by navigating through three areas for more information: </li>
+                            <li><a href="families.html">Families</a></li>
+                            <li><a href="genera.html">Genera</a></li>
+                            <li><a href="species.html">Species</a></li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg2">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="contributor.html">Contributions</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Flora<br>Contributions</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Card display of plants</li>
+                            <li>User-uploaded photos</li>
+                            <li>Name of the plants</li>
+                            <li>Name of the contributors</li>
+                            <li>User comments</li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg3">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="enquiry.html">Enquiry</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Flora<br>Enquiries</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>User details</li>
+                            <li>Make inquiries about plants based on seven families:</li>
+                            <li>~ Dipterocarpaceae&nbsp;&nbsp;&nbsp; ~ Lauraceae</li>
+                            <li>~ Burseraceae&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~ Myristicaceae</li>
+                            <li>~ Chrysobalanaceae&nbsp;&nbsp; ~ Meliaceae </li>
+                            <li>~ Ebenaceae</li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg4">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="enhancement1.html">Enhancements</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Website<br>Enhancements</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Sticky Dropdown Navigation + Hamburger</li>
+                            <li>Fluid Layout: Mobile & Tablet Adaptation</li>
+                            <li>Card Flipping Animation on Mouseover </li>
+                            <li>Embedded YouTube video</li>
+                            <li>Embedded Google map</li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg5">
+                    </div>
+                </div>
+            </div>
+            <div class="navbar">
+                <a class="navbarBtn" href="#">About Us</a>
+                <div class="navRow">
+                    <div class="navCol column1">
+                        <h2>Website<br>Developers</h2>
+                    </div>
+                    <div class="navCol column2">
+                        <ul>
+                            <li>Meet our software developers:</li>
+                            <li><a href="profile1.html">Deron Foo</a></li>
+                            <li><a href="profile2.html">Esther Chai</a></li>
+                            <li><a href="profile3.html">Liew Mei Qi</a></li>
+                            <li><a href="profile4.html">Beh Jia Yi</a></li>
+                            <li><a href="profile5.html">Lai Jun Hong</a></li>
+                        </ul>
+                    </div>
+                    <div class="navCol column3 colImg6">
+                    </div>
+                </div>
+            </div>
+            <a href="" class="icon"><img src="photos/homepage/search.png" alt="Search icon"></a>
+            <!-- search icon obtained from https://www.flaticon.com/free-icon/magnifying-glass_49116?term=search&page=1&position=16&origin=tag&related_id=49116 -->
+            <a href="" class="icon"><img src="photos/homepage/user.png" alt="User account icon"></a>
+            <!-- account icon obtained from https://www.flaticon.com/free-icon/user_1077114?term=account&page=1&position=3&origin=search&related_id=1077114 -->
+        </nav>
+        <div id="hamburgerNav">
+        <!-- Hamburger navigational menu that will only show up when clicked on under minimized screen/mobile view -->
+            <ul>
+                <li><a href="identify.html">Flora Identification<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="families.html">Explore - Families<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="genera.html">Explore - Genera<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="species.html">Explore - Species<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="contributor.html">Flora Contributions<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="enquiry.html">Flora Enquiries<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="enhancement1.html">Website Enhancements<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile1.html">Dev - Deron Foo<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile2.html">Dev - Esther Chai<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile3.html">Dev - Liew Mei Qi<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile4.html">Dev - Beh Jia Yi<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <li><a href="profile5.html">Dev - Lai Jun Hong<img src="photos/homepage/right-arrow.png" alt="Right arrow"></a></li>
+                <!-- arrow icon obtained from https://www.flaticon.com/free-icon/right-arrow_271228?term=arrow&page=1&position=1&origin=tag&related_id=271228 -->
+            </ul>
+        </div>
+    </header>
+    <section class="identify_container">
+        <h1>Plant Identification</h1>
+        <h2>Guidelines for Plant Identification:</h2>
+        <ul>
+            <li><strong>Maximum of 4 Pictures:</strong> You can upload up to four pictures of the same plant for identification.</li>
+            <li><strong>At Least One of Leaf, Flower, Fruit, or Bark:</strong> To increase the success rate of plant identification, it is recommended that you include one photo for each: the leaf, flower, fruit, and bark of the plant.</li>
+            <li><strong>Recommended Image Dimensions:</strong> For more accurate identification results, it is also recommended to use images with a width(x) of 1280 pixels.</li>
+        </ul>
+        <img src="photos/identify/identify.png" alt="Img width">
+        <div class="dropzone">
+            <label for="file" class="file_name">Image Files</label>
+            <input type="file" id="file" class="file_input" />
+        </div>
+        <button class="search_button" onclick="document.getElementById('file').click()">Search</button>
+    </section>
+    <section class="plant_name">
+        <h2>Botany Maven Identifies Your Plants</h2>
+        <dl>
+            <dt>Scientific Plant Name:</dt>
+            <dd>Nepenthes rajah (e.g.)</dd>
+            <dt>Common Name:</dt>
+            <dd>Rajah Brooke's Pitcher Plant (e.g.)</dd>
+        </dl>
+        <aside>
+            <p>Botany Maven is your go-to resource for identifying plants and learning how to care for them. Whether you're a plant enthusiast or a beginner, we've got you covered.</p>
+            <p>Our team of experts is dedicated to helping you discover the world of plants, from identifying unknown species to providing tips on maintaining a thriving garden.</p>
+        </aside>
+        <div class="plant_photo">
+            <h2>Plant Identified:</h2>
+            <img src="photos/identify/Pitcher1.jpg" alt="Pitcher Plant 1">
+            <!-- plant photo obtained from https://www.californiacarnivores.com/products/nepenthes-rajah-x-tenuis-potted -->
+            <img src="photos/identify/Pitcher2.jpeg" alt="Pitcher Plant 2">
+            <!-- plant photo obtained from https://inaturalist-open-data.s3.amazonaws.com/photos/9745842/original.jpg -->
+            <img src="photos/identify/Pitcher3.jpg" alt="Pitcher Plant 3">
+            <!-- plant photo obtained from https://www.slate.com/blogs/atlas_obscura/2014/05/26/nepenthes_rajah_is_a_fascinating_carnivorous_pitcher_plant_in_malaysian.html -->
+        </div>
+        <h2>Results Accuracy: 83.23%</h2>
+    </section>
+    <article class="plant_info">
+        <h2>Care Tips for This Plant</h2>
+        <div class="grid_container">
+            <div class="grid_item">
+                <span class="number_count">1</span>
+                <div class="numbered_grid_content">
+                    <h3>Provide your plants sunlight</h3>
+                    <div class="thing_fact">
+                        <ul>
+                            <li>Full sunlight plants need 4-6 hours of direct sun daily.</li>
+                            <li>Partial sunlight plants require 2-3 hours of direct sun daily.</li>
+                            <li>Shade-loving plants thrive with just 1 hour of direct sun daily.</li>
+                        </ul>
+                        <p>Choose a location for your plants that matches these requirements, and keep in mind that south-facing windows receive the most light, while north-facing windows receive the least. Proper lighting is crucial for the health and longevity of your indoor plants.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_item">
+                <span class="number_count">2</span>
+                <div class="numbered_grid_content">
+                    <h3>Water your plants regularly</h3>
+                    <div class="thing_fact">
+                        <p>The proper way to water houseplants:</p>
+                        <ul>
+                            <li>Water needs vary; some like constant moisture, others need less.</li>
+                            <li>Typically, water 2-3 times a week without making soil muddy.</li>
+                            <li>Check moisture by finger test.</li>
+                            <li>Use warm water to prevent root shock.</li>
+                            <li>Monthly, water deeply in the sink to prevent salt buildup.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_item">
+                <span class="number_count">3</span>
+                <div class="numbered_grid_content">
+                    <h3>Fertilize your plants weekly</h3>
+                    <div class="thing_fact">
+                        <p>To fertilize indoor plants effectively:</p>
+                        <ul>
+                            <li>Fertilize every 2-3 weeks due to the lack of natural organic matter indoors.</li>
+                            <li>Choose a balanced fertilizer like 6-12-6 or 10-10-10 for most plants.</li>
+                            <li>Apply as directed on the package: sprinkle on top of the soil or mix with water for liquid fertilizers.</li>
+                            <li>No need to mix into the soil; it will dissolve naturally over time.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="plant_info">
+        <h2>Right Environment for this Plant</h2>
+        <div class="grid_container">
+            <!-- information references: https://www.wikihow.com/Take-Care-of-Plants 
+                https://extension.oregonstate.edu/gardening/techniques/environmental-factors-affecting-plant-growth -->
+            <div class="grid_item">
+                <span class="number_count">1</span>
+                <div class="numbered_grid_content">
+                    <h3>Quality</h3>
+                    <div class="thing_fact">
+                        <p>The right environment for plants depends on understanding light quality. Sunlight contains a full spectrum of wavelengths, with blue and red light being most crucial for growth. Blue light promotes vegetative growth, while red light, in combination with blue, encourages flowering. Plants appear green because they reflect green light.</p>
+                        <p>Choosing the correct light source is vital for manipulating plant growth. Fluorescent (cool white) light, rich in blue wavelengths, is great for leafy growth and seedlings. Incandescent light, high in red/orange, is often too hot for plants. Specialized grow lights mimic sunlight by blending red and blue, but they can be costly and not significantly better than regular fluorescent lights.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_item">
+                <span class="number_count">2</span>
+                <div class="numbered_grid_content">
+                    <h3>Temperature</h3>
+                    <div class="thing_fact">
+                        <p>Temperature plays a crucial role in a plant's environment, impacting various processes such as photosynthesis, transpiration, respiration, germination, and flowering. Within certain limits, higher temperatures can increase these processes. Additionally, temperature, in conjunction with day length, influences the shift from vegetative to reproductive growth, either expediting or delaying this transition depending on the plant and conditions.</p>
+                        <p>Nepenthes rajah thrives in a montane rainforest habitat with a daytime temperature of 10°C to 25°C (50°F to 77°F), with nighttime temperatures dropping to 5°C to 10°C (41°F to 50°F). These cooler temperatures aid pitcher formation, allowing pitchers to efficiently trap and digest prey. However, prolonged high temperatures can cause stress or damage, making Nepenthes rajah sensitive to extreme heat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_item">
+                <span class="number_count">3</span>
+                <div class="numbered_grid_content">
+                    <h3>Water and Humidity</h3>
+                    <div class="thing_fact">
+                        <p>Water is vital for plants, constituting about 90% of their composition. It serves various crucial functions:</p>
+                        <ol>
+                            <li>Essential for photosynthesis and respiration.</li>
+                            <li>Maintains turgor pressure in cells, which is necessary for cell shape and growth.</li>
+                            <li>Acts as a solvent for minerals and carbohydrates.</li>
+                            <li>Helps cool leaves through transpiration.</li>
+                            <li>Regulates stomatal opening and closing, affecting transpiration and photosynthesis.</li>
+                            <li>Facilitates root movement through the soil.</li>
+                            <li>Serves as the medium for biochemical reactions.</li>
+                        </ol>
+                        <p>Relative humidity is the ratio of air vapor to water capacity, with warmer air holding more vapor. Higher humidity affects plant transpiration rate. Stoma opening slows transpiration, peaking on hot, dry, windy days and slowing down on cool, high humidity days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </article>
+    <section id="map">
+        <h2>Main location where the plant can be found</h2>
+        <!-- Embed Google Maps using an iframe -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15869.639595603054!2d116.54852394349722!3d6.075334239881418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x323ba2565e9224cb%3A0x2281c3fec0a9c05e!2sMount%20Kinabalu!5e0!3m2!1sen!2smy!4v1696843867806!5m2!1sen!2smy" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <section class="footer_section1">
+                <h3>Contact Us</h3>
+                <p>Phone Number:<a href="tel:6016123456"><em> +6016123456</em></a></p>
+                <p>Email Address:<a href="mailto:botanymaven123@gmail.com"><em> botanymaven123@gmail.com</em></a></p>
+            </section>
+            <section class="footer_section2">
+                <h3>Address</h3>
+                <p><em>Lot 125, Ground Floor,</em></p>
+                <p><em>Jalan Pisang Goreng,</em></p>
+                <p><em>93100, Kuching,</em></p>  
+                <p><em>Sarawak.</em></p>  
+            </section>
+            <section class="footer_section3">
+                <h3>Follow Us</h3>
+                <table>
+                    <tr>
+                        <td><svg class="footer_icon" width="29" height="24">
+                            <path d="m14.102 6.384.062 1.038-1.05-.127C9.297 6.808 5.96 5.155 3.128 2.38L1.742 1.003 1.385 2.02c-.755 2.267-.273 4.66 1.3 6.27.84.89.652 1.018-.796.488-.505-.17-.946-.296-.988-.233-.147.15.357 2.076.756 2.84.545 1.058 1.658 2.096 2.875 2.71l1.028.488-1.216.02c-1.175 0-1.217.022-1.09.467.418 1.377 2.076 2.84 3.923 3.475l1.3.444-1.132.677a11.815 11.815 0 0 1-5.624 1.568c-.944.02-1.72.106-1.72.17 0 .21 2.56 1.398 4.05 1.864 4.47 1.376 9.78.783 13.766-1.57 2.833-1.672 5.666-5 6.988-8.22.713-1.715 1.426-4.85 1.426-6.354 0-.975.063-1.102 1.24-2.267.69-.68 1.342-1.42 1.467-1.632.21-.403.19-.403-.88-.043-1.785.636-2.036.55-1.155-.402.65-.678 1.427-1.907 1.427-2.267 0-.063-.316.042-.673.233-.377.21-1.217.53-1.846.72l-1.132.36-1.03-.7c-.565-.38-1.363-.805-1.782-.932-1.07-.296-2.707-.254-3.673.085-2.623.953-4.28 3.41-4.09 6.1z" fill="#FFFFFF"></path>
+                        </svg></td>
+                        <td>&nbsp; <a href="">Twitter</a></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;<svg class="footer_icon" width="12" height="24">
+                            <path d="M7.446 24V12h3.313l.438-4.137H7.446l.006-2.07c0-1.08.103-1.657 1.652-1.657h2.07V0H7.863c-3.98 0-5.38 2.006-5.38 5.38v2.483H0V12h2.48v12h4.966z" fill="#FFFFFF"></path>
+                        </svg></td>
+                        <td>&nbsp; <a href="">Facebook</a></td>
+                    </tr>
+                    <tr>
+                        <td><svg class="footer_icon" width="26" height="24">
+                            <path d="M12.138 15.92c-2.206 0-3.994-1.776-3.994-3.967 0-2.19 1.788-3.967 3.994-3.967 2.205 0 3.993 1.776 3.993 3.967 0 2.19-1.787 3.967-3.992 3.967m0-10.078c-3.398 0-6.153 2.736-6.153 6.11 0 3.376 2.755 6.112 6.153 6.112 3.397 0 6.152-2.736 6.152-6.11 0-3.376-2.755-6.112-6.152-6.112" fill="#FFFFFF"></path>
+                            <path d="M21.89 16.762c-.053 1.16-.25 1.79-.413 2.21a3.684 3.684 0 0 1-.896 1.368 3.682 3.682 0 0 1-1.376.89c-.423.163-1.057.357-2.225.41-1.264.057-1.643.07-4.842.07-3.2 0-3.58-.013-4.842-.07-1.168-.053-1.802-.247-2.225-.41a3.714 3.714 0 0 1-1.376-.89 3.686 3.686 0 0 1-.896-1.368c-.164-.42-.36-1.05-.413-2.21-.058-1.255-.07-1.63-.07-4.81 0-3.177.012-3.553.07-4.808.053-1.16.25-1.79.413-2.21.217-.555.477-.952.896-1.368.42-.417.818-.675 1.377-.89.424-.163 1.058-.357 2.226-.41 1.264-.057 1.642-.07 4.842-.07l4.84.07c1.17.056 1.803.247 2.226.41.56.215.958.473 1.377.89.42.416.68.813.897 1.368.164.42.36 1.05.413 2.21.058 1.255.07 1.63.07 4.81 0 3.177-.012 3.553-.07 4.808m2.156-9.716c-.058-1.266-.26-2.13-.556-2.888a5.83 5.83 0 0 0-1.382-2.108A5.876 5.876 0 0 0 19.986.677c-.763-.294-1.633-.495-2.91-.553C15.8.066 15.392.052 12.14.052c-3.254 0-3.662.014-4.94.072-1.276.058-2.146.26-2.908.553A5.877 5.877 0 0 0 2.167 2.05 5.83 5.83 0 0 0 .785 4.158C.49 4.915.287 5.78.23 7.046.17 8.316.155 8.72.155 11.953S.17 15.59.23 16.86c.057 1.266.26 2.13.555 2.888a5.83 5.83 0 0 0 1.382 2.108A5.877 5.877 0 0 0 4.29 23.23c.762.293 1.632.494 2.908.552 1.278.058 1.686.072 4.94.072 3.253 0 3.66-.014 4.94-.072 1.275-.058 2.145-.26 2.908-.553a5.876 5.876 0 0 0 2.122-1.374 5.83 5.83 0 0 0 1.382-2.108c.296-.757.498-1.622.556-2.888.06-1.27.073-1.675.073-4.907s-.015-3.637-.074-4.907" fill="#FFFFFF"></path>
+                            <path d="M19.97 5.6c0 .79-.643 1.428-1.437 1.428s-1.438-.64-1.438-1.428c0-.788.644-1.428 1.438-1.428.794 0 1.438.64 1.438 1.428" fill="#FFFFFF"></path>
+                        </svg></td>
+                        <td>&nbsp; <a href="">Instagram</a></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <div class="acknowledgement">
+            <h3>Acknowledgements</h3>
+            <table>
+                <tr>
+                    <td><a href="https://www.freepik.com/free-photo/agronomist-expert-examining-corn-leaf-looking-disease-indicator_11134023.htm?query=botanical%20identification&position=8&from_view=keyword&track=ais#position=8&query=botanical%20identification" target="_blank">Flora Identification (navImg)</a></td>
+                    <td><a href="https://www.freepik.com/free-photo/woman-moody-nature-photo-aesthetic-greenhouse_18117343.htm#query=explore%20plants&position=47&from_view=search&track=ais" target="_blank">Flora Exploration (navImg)</a></td>
+                    <td><a href="https://www.freepik.com/free-photo/woman-taking-snapshot-her-plant-social-media_17430697.htm#query=plants%20photo%20sharings&position=7&from_view=search&track=ais" target="_blank">Flora Contributions (navImg)</a></td>
+                    <td><a href="https://www.freepik.com/free-photo/happily-gardener-man-use-smartphone-laptop-computer-while-online-tutorial-potted-plans-shop_18685208.htm#query=question%20about%20plant&position=37&from_view=search&track=ais" target="_blank">Flora Enquiries (navImg)</a></td>
+                    <td><a href="https://www.freepik.com/free-photo/female-florist-using-laptop-with-potted-plants-desk_3180761.htm#query=software%20about%20plants&position=2&from_view=search&track=ais" target="_blank">Website Enhancements (navImg)</a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.freepik.com/free-photo/team-coworkers-looking-green-screen-template-laptop-working-with-isolated-mockup-display-business-collaboration-partnership-people-sitting-coworking-office-with-copyspace_44988952.htm#query=green%20software%20teams&position=29&from_view=search&track=ais" target="_blank">Website Developers (navImg)</a></td>
+                    <td><a href="https://www.flaticon.com/free-icon/magnifying-glass_49116?term=search&page=1&position=16&origin=tag&related_id=49116" target="_blank">Search Icon (navImg)</a></td>
+                    <td><a href="https://www.flaticon.com/free-icon/user_1077114?term=account&page=1&position=3&origin=search&related_id=1077114" target="_blank">Account Icon (navImg)</a></td>
+                    <td><a href="https://www.flaticon.com/free-icon/right-arrow_271228?term=arrow&page=1&position=1&origin=tag&related_id=271228" target="_blank">Arrow Icon (navImg)</a></td>
+                    <td><a href="https://png.pngitem.com/pimgs/s/160-1604057_menu-free-download-and-svg-menu-icon-hd.png" target="_blank">Hamburger Icon (navImg)</a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><a href="https://www.californiacarnivores.com/products/nepenthes-rajah-x-tenuis-potted" target="_blank">Pitcher1</a></td>
+                    <td><a href="https://inaturalist-open-data.s3.amazonaws.com/photos/9745842/original.jpg" target="_blank">Pitcher2</a></td>
+                    <td><a href="https://www.slate.com/blogs/atlas_obscura/2014/05/26/nepenthes_rajah_is_a_fascinating_carnivorous_pitcher_plant_in_malaysian.html" target="_blank">Pitcher3</a></td>
+                    <td></td>
+                </tr>
+            </table>
+            <h3>Website Showcase</h3>
+            <a href="https://www.youtube.com" target="_blank">https://www.youtube.com</a>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2023 Botany Maven. All Rights Reserved.</p></div>
+    </footer>
+</body>
+</html>
+
+
+
+
+    
