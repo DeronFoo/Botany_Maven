@@ -1,0 +1,1700 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif; /* Generic fonts are chosen as the main font families of the website */
+}
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #fffff1; /* Define the main content background colour of the website */
+}
+
+/* CSS for Website Header */
+header {
+    position: fixed;
+    top: 0; right: 0; left: 0; 
+    display: flex; 
+    align-items: center;
+    padding: 0 11%;
+    background-color: #cfdfd7; /* Light green as the second colour of the website mainly used for navigational menu */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+/* CSS for Website Logo and Icons */
+header a#logo {
+    margin-right: 6.6%;
+}
+header a#logo img { 
+    width: 120px;
+}
+header a.icon { /* Styles applied on user account and search icons */
+    position: relative; 
+    top: 5px; left: 40%; 
+    display: inline-block;
+    padding: 25px 15px;
+}
+header a.icon img { 
+    width: 20px;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for Website Dropdown Navigation Menu */
+nav {
+    display: flex;
+}
+a.navbarBtn {
+	font-size: 16px;
+    padding: 30px 15px;
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+}
+a.navbarBtn:after { /* Simple hover animation for main links under navigation menu */
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 0.5px; width: 0;
+    left: 16px; bottom: 20px;
+    transition: 0.3s;
+}
+a.navbarBtn:hover:after {
+    width: 20px;
+}
+.navRow {
+    position: absolute;
+	left: 0;
+	width: 100%;
+	display: none; /* Dropdown content displayed during main links mouseover */
+    background-color: #cfdfd7;
+	z-index: 10;
+}
+.navbar:focus-within .navRow,
+.navbar:hover .navRow {
+	display: block;
+    border-top: 1px solid #9f9f9f;
+}
+.navCol { /* Vertical arrangements for dropdown menu content */
+	float: left;
+	padding: 0;
+	height: 450px;
+}
+.navCol a, .main2 a, #enhancement_content .reference a {
+    font-weight: bolder;
+}
+.navCol a:hover, .main2 a:hover, #enhancement_content .reference a:hover {
+    opacity: 0.6;
+}
+.column1 {
+    width: 25%;
+    padding: 3% 11% ;
+}
+.column2 {
+    width: 38%;
+    padding: 2.5% 0;
+}
+.column2 ul li {
+    list-style-type: none;
+    padding: 8px 0;
+    font-size: 16px;
+    opacity: 0;
+}
+.column3 {
+    width: 37%;
+    overflow-x: hidden;
+}
+/* Images displayed under each dropdown menu */
+.colImg1 {
+    background: url(../photos/homepage/identify.jpg) no-repeat;
+    /* image obtained from https://www.freepik.com/free-photo/agronomist-expert-examining-corn-leaf-looking-disease-indicator_11134023.htm#query=botanical%20identification&position=8&from_view=keyword&track=ais#position=8&query=botanical%20identification */
+    background-size: cover;
+    background-position: center;
+}
+.colImg2 {
+    background: url(../photos/homepage/explore.jpg) no-repeat;
+    /* image obtained from https://www.freepik.com/free-photo/woman-moody-nature-photo-aesthetic-greenhouse_18117343.htm#query=explore%20plants&position=47&from_view=search&track=ais */
+    background-size: cover;
+    background-position: center;
+}
+.colImg3 {
+    background: url(../photos/homepage/contributions.jpg) no-repeat;
+    /* image obtained from https://www.freepik.com/free-photo/woman-taking-snapshot-her-plant-social-media_17430697.htm#query=plants%20photo%20sharings&position=7&from_view=search&track=ais */
+    background-size: cover;
+    background-position: center;
+}
+.colImg4 {
+    background: url(../photos/homepage/enquiry.jpg) no-repeat;
+    /* image obtained from https://www.freepik.com/free-photo/happily-gardener-man-use-smartphone-laptop-computer-while-online-tutorial-potted-plans-shop_18685208.htm#query=question%20about%20plant&position=37&from_view=search&track=ais */
+    background-size: cover;
+    background-position: center;
+}
+.colImg5 {
+    background: url(../photos/homepage/enhancements.jpg) no-repeat;
+    /* image obtained from https://www.freepik.com/free-photo/female-florist-using-laptop-with-potted-plants-desk_3180761.htm#query=software%20about%20plants&position=2&from_view=search&track=ais */
+    background-size: cover;
+    background-position: center;
+}
+.colImg6 {
+    background: url(../photos/homepage/aboutus.jpg) no-repeat;
+    /* image obtained from https://www.freepik.com/free-photo/team-coworkers-looking-green-screen-template-laptop-working-with-isolated-mockup-display-business-collaboration-partnership-people-sitting-coworking-office-with-copyspace_44988952.htm#query=green%20software%20teams&position=29&from_view=search&track=ais */
+    background-size: cover;
+    background-position: center;
+}
+.column1 h2, .column2 ul li, .column3 { /* FadeInFromTop animation for dropdown menu content */
+    animation-name: fadeInFromTop; /* Define the animation name */
+    animation-duration: 1s; /* Set the animation duration */
+    animation-delay: 0.2s; /* Add a delay to start the animation */
+    animation-fill-mode: forwards; /* Keep the final animation state */
+}
+@keyframes fadeInFromTop { /* Define the fadeInFromTop animation */
+    from {
+        opacity: 0; /* Start with zero opacity */
+        transform: translateY(-5px); /* Start 20px above */
+    }
+    to {
+        opacity: 1; /* Transition to full opacity */
+        transform: translateY(0); /* Stay at the original position */
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for Website Hamburger Menu */
+#sidebar_menu { /* Invisible checkbox used for hamburger menu toggles (control the visibility of the sidebar menu) */
+    display: none;
+}
+header label {  /* Hamburger menu icon linked to the checkbox through label tag */
+    cursor: pointer;
+    display: none;
+}
+#hamburgerNav { 
+    position: absolute;
+    top: 100%; left:0; right:0;
+    height: 100vh;
+    display: none;
+    background-color: #cfdfd7;
+    border-top: 1px solid rgba(0,0,0,.1);
+    padding: 50px;
+    animation-name: moveInFromLeft; /* MoveInFromLeft animation for hamburger sidebar menu */
+    animation-duration: 1s; 
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards; 
+}
+@keyframes moveInFromLeft { /* Define the moveInFromLeft animation */
+    from {
+        transform: translateX(-100%); 
+    }
+    to {
+        transform: translateX(0); 
+    }
+}
+#hamburgerNav ul li {
+    list-style-type: none;
+    width: 100%;
+    padding: 10px 0;
+}
+#hamburgerNav ul li a {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+}
+#hamburgerNav ul li a:hover {
+    font-weight: bold;
+}
+#hamburgerNav ul li a::before { /* Simple underline animation upon links mouseover */ 
+    content: '';
+    position: absolute;
+    left: 0; bottom:-5px; 
+    width: 100%; height: 2px;
+    border-radius: 4px;
+    background-color: black;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+#hamburgerNav ul li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+#hamburgerNav ul li img { /*Styles for right arrow icons */
+    width: 15px;
+    position: relative;
+    top: 2px;
+    float: right;
+}
+
+/* Automatic adjustment made during minimzed screen size (fluid layout) */
+@media(max-width:991px) {
+    header {
+        padding: 0;
+    }
+    header label {
+        display: initial;
+        width: 25%;
+        padding-left: 25px;
+    }
+    header label img { /* Hamburger icon */
+        width: 25px;
+    }
+    header label img:hover { 
+        opacity: 0.5;
+    }
+    header a#logo { /* Website logo re-positioning */
+        width: 45%;
+        margin: 0;
+    }
+    header a#logo img {
+        margin: 13px 28%;
+    }
+    header a.icon {
+        padding: 25px 10px;
+        top: 5px; left: 0%;
+    }
+    nav {
+        width: 25%;  
+        padding-left: 5%;
+    }
+    .navbar {
+        display: none;
+    }
+    #sidebar_menu:checked ~ #hamburgerNav { /* Display sidebar menu when hamburger icon clicked */
+        display: initial;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for Website Homepage (index.html) */
+.homepage {
+    float: right;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.homepage img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+/* Apply similar styles to most h1 and h2 of the website */
+.homepage h1, .homepage_2 h1,.homepage_4 h1, #form_content h1,
+.signin_form h1, .identify_container h1, #contributor h1, #enhancement h1,
+.families h1, .genera h1, .species h1, .families-header h1, .genera-header h1,
+.families-info h2, .genera-info h2, .species-info h2 {
+    font-family: Georgia,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    color: black;
+    font-size: 45px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    padding-left: 10%;
+    padding-top: 10%;
+}
+.main p {
+    margin-right: 60px; /* Add space around the paragraph */
+    line-height: 1.4;
+    text-align: justify;
+}
+.main a {
+    text-decoration: none;
+    margin: 7px 0; /* Add space around the buttons */
+}
+a.button, .plant-buttons p a { /* Styles for login and sign up buttons */
+    margin-top: 22px;
+    margin-bottom: -7px;
+    padding: 15px 20px;
+    min-width: 250px;
+    font-size: 18px;
+    background-color: transparent; 
+    color: black; 
+    border: 1px solid black; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+}
+a.button:hover, .plant-buttons p a:hover {
+    background-color: black; 
+    color: white; 
+}
+.homepage_2, .homepage_4 {
+    width: 100%;
+    height: 100vh;
+    background-color: #cfdfd7;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.homepage_4 {
+    height: 120vh;
+}
+.homepage_2>.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+}
+.container>.item  {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    text-align: center;
+}
+.item img {
+    width: 150px;
+    margin: 20px 0;
+}
+.item p {
+    margin: 20px;
+    line-height: 1.4;
+}
+.homepage_3 {
+    float: left;
+}
+.main2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 10%;
+    padding-top: 0%;
+}
+.main2 p {
+    margin-left: 70px;
+    line-height: 1.4;
+    text-align: justify;
+}
+.main2 h1 {
+    margin-left: 70px;
+    text-align: left;
+}
+.homepage_4 h2 {
+    margin: 0 0 20px 0;
+}    
+#video {
+    width: 100%;
+    max-width: 976px;
+    height: 515px;
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow:
+      inset #168665 0 0 0 5px, 
+      inset #059c8e 0 0 0 10px;
+}
+@media(max-width:700px) {
+    .homepage {
+        width: 100%;
+        height: 65vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .homepage h1, .homepage_2 h1, .homepage_4 h1 {
+        position: relative;
+        font-size: 32px;
+        bottom: 25px;
+        margin-bottom: 0;
+        font-weight: 600;
+        margin-left: 0;
+        text-align: center;
+    }
+    a.button {
+        min-width: 350px;
+    }
+    .main, .main2 {
+        padding: 0;
+    }
+    .main p {
+        position: relative;
+        margin:0 25px;
+        font-size: 15px;
+    }
+    .main2 p {
+        margin:0 25px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .homepage_2 {
+        height: 150vh;
+    }
+    .homepage_2>.container {
+        display:inline-block;
+    }
+    .item img {
+        width: 120px;
+        margin: 10px 0;
+    }
+    .item p {
+        margin: 10px 18px;
+        text-align: justify;
+        font-size: 15px;
+    }
+    .homepage_4 h2 {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for Website Footer */
+footer {
+    background-color: #168665 ; /* Last colour chosen (dark green) mainly used for logo and footer */
+    color: white;
+    padding: 60px 0;
+    width: 100%;
+    height: 85vh;
+}
+.footer_container {
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 4%;
+}
+.footer_container section {
+    width: 20%;
+}
+.footer_container section p {
+    padding: 5px 0;
+}
+.footer_container section h3, .acknowledgement h3 {
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+.footer_section1 p {
+    line-height: 25px;
+}
+.footer_section2 {
+    text-align: center;
+}
+.footer_container section a, .acknowledgement a {
+    font-style: italic;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+}
+.footer_container section a:hover, .acknowledgement a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.footer_icon {
+    margin-top: 5px;
+}
+.acknowledgement {
+    padding-top: 40px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.acknowledgement table {
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.acknowledgement table tr td {
+    padding: 2px;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+}
+@media(max-width:800px) {
+    footer {
+        height: 60vh;
+        padding: 30px 0;
+    }
+    .footer_container {
+        padding: 0;
+        text-align: center;
+    }
+    .footer_container section {
+        width: 30%;
+    }
+    .footer_container section h3, .acknowledgement h3 {
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+    .footer_container section p, .footer_container table a, .acknowledgement a, .footer-bottom {
+        padding: 2px 0;
+        font-size: 10px;
+    }
+    .footer_section1 p {
+        line-height: 15px;
+    }
+    .footer_icon {
+        display: none;
+    }
+    .acknowledgement {
+        width: 100%;
+        padding-top: 20px;
+    }
+    .acknowledgement table {
+        margin-bottom: 20px;
+        line-height: 10px;
+    }
+    .footer_container table a {
+        position: relative;
+        left: 50%;
+    }
+    .footer-bottom {
+        margin-top: 20px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for login.html */
+#login_page {
+    background: url(../photos/forms/form_bg.jpg) no-repeat;
+    /* image obtained from https://www.freepik.com/free-photo/tropical-green-leaves-background_4102585.htm#&position=1&from_view=search&track=ais */
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    align-items: center;
+}
+.signin_form {
+    background-color: #fffff1;
+    margin: 0 auto;
+    padding: 0 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+#login_form {
+    width: 60%;
+    height: 60vh;
+    max-width: 350px;
+    max-height: 370px;
+}
+#signup_form {
+    width: 60%;
+    height: 80vh;
+    max-width: 350px;
+    max-height: 450px;
+}
+#back_icon {
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    position: relative;
+    left: 98%;
+    top: 5px;
+}
+#back_icon:hover {
+    opacity: 0.5;
+}
+.signin_form p.link1 {
+    margin-top: 1vh;
+    margin-bottom: 6vh;
+}
+.signin_form p.link2 {
+    margin-top: 1.5vh;
+    text-align: center;
+}
+.signin_form p a {
+    font-size: 15px;
+    font-weight:bolder;
+}
+.signin_form p a:hover {
+    opacity: 0.5;
+}
+@media(max-width:800px) {
+    #login_form {
+        width: 70%;
+        height: 70vh;
+    }
+    #signup_form {
+        width: 80%;
+        height: 90vh;
+    }
+    .signin_form p a, .signin_form p.link2 {
+        font-size: 13px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for identify.html */
+.identify_container {
+    margin: 120px auto 50px auto;
+    max-width: 800px;
+    height: auto;
+    text-align: center;
+    padding: 40px 80px;
+    background-color: #cfdfd7;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.identify_container h1 {
+    text-align: center;
+    margin: 0; 
+}
+.identify_container h2, .plant_name h2, .map h2{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.dropzone {
+    border: 3px dashed #168665;
+    padding: 60px;
+    cursor: pointer;
+}
+.dropzone:hover {
+    background-color: #fffff1;
+}
+.file_name {
+    font-size: 18px;
+    font-weight: 600;
+}
+.file_input {
+    display: none; /* Hide the default file input */
+}
+.search_button {
+    margin-top: 20px;
+}
+.plant_name {
+    margin: 40px auto;
+    width: 1000px;
+    height: auto;
+    text-align: center;
+    padding: 40px 80px;
+    background-color: #cfdfd7;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.plant_name dl {
+    font-size: 18px;
+    text-align: left;
+    float: left;
+    margin-top: 15px;
+}
+.plant_name dl dt {
+    font-weight: 600;
+    margin: 10px auto 5px auto;
+}
+.plant_name aside {
+    float: right;
+    width: 60%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid #168665;
+    background-color: #fffff1;
+    text-align: justify;
+}
+.plant_name aside p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+.plant_photo {
+    clear: both;
+    margin: 20px auto;
+    padding-top: 5px;
+}
+.plant_photo img {
+    width: 250px; 
+    height: 250px;
+    object-fit:cover;
+    border: 5px solid #168665;
+    border-radius: 5px;
+    margin: 10px;
+}
+article.plant_info {
+    text-align: center;
+    padding: 0 40px;
+}
+article.plant_info .grid_container {
+    display: flex;
+    margin: 30px 0 40px 0;
+}
+article.plant_info .grid_item {
+    margin: 0 20px;
+    padding: 30px 40px;
+    background-color: #cfdfd7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    flex: 1; /* Distribute items evenly within the container */
+}
+.grid_item .number_count {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #168665 ;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    float: left; 
+}
+.grid_item .numbered_grid_content h3 {
+    font: bold 18px; 
+    text-align: left;
+    position: relative; 
+    top: 15px; left: 5px;
+    margin-bottom: 40px;
+}
+.thing_fact {
+    text-align: justify;
+    font-size: 16px;
+}
+.thing_fact p {
+    margin: 10px 0;
+    line-height: 20px;
+}
+.thing_fact ul, .thing_fact ol {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    left: 8px;
+}
+.thing_fact ul li, .thing_fact ol li {
+    margin-bottom: 10px;
+}
+#map {
+    width: 60%;
+    height: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+#map iframe {
+    width: 100%;
+    height: 80%;
+    margin: 20px auto;
+    border: 5px solid #168665;
+    border-radius: 5px;
+}
+@media(max-width:900px) {
+    .identify_container {
+        max-width: 400px;
+        margin: 120px auto 40px;
+    }
+    .identify_container, .plant_name {
+        padding: 20px 40px; 
+    }
+    .identify_container h1 {
+        font-size: 30px;
+    }
+    .identify_container h2, .plant_name h2, .map h2, .plant_info h2{
+        font-size: 18px;
+    }
+    .identify_container h2, .plant_name h2, .map h2{
+        margin-top: 15px;
+    }
+    .identify_container img {
+        width: 200px;
+    }
+    .dropzone {
+        padding: 30px;
+    }
+    .file_name {
+        font-size: 14px;
+    }
+    .search_button {
+        margin-top: 20px;
+    }
+    .plant_name {
+        margin: 40px auto;
+        width: 400px;
+        height: auto;
+    }
+    .plant_name dl {
+        font-size: 14px;
+        text-align: center;
+        float: none;
+        margin-top: 5px;
+    }
+    .plant_name dl dt {
+        margin: 5px auto 2px auto;
+    }
+    .plant_name aside {
+        display: none;
+    }
+    .plant_photo {
+        margin: 0 auto;
+    }
+    .plant_photo img {
+        margin: 5px;
+    }
+    .grid_item {
+        display: inline-block;
+    }
+    article.plant_info {
+        text-align: center;
+        padding: 0 20px;
+    }
+    article.plant_info .grid_container {
+        display: inline-block;
+        margin: 10px 0 20px 0;
+    }
+    article.plant_info .grid_item {
+        margin: 15px 20px;
+        padding: 20px 30px;
+    }
+    .grid_item .number_count {
+        width: 40px; height: 40px;
+        font-size: 15px;
+    }
+    .grid_item .numbered_grid_content h3 {
+        font: bold 15px; 
+        top: 10px; left: 5px;
+        margin-bottom: 40px;
+    }
+    .thing_fact {
+        font-size: 13px;
+    }
+    .thing_fact p {
+        line-height: 14px;
+    }
+    .thing_fact ul, .thing_fact ol {
+        margin-bottom: 5px;
+        left: 5px;
+    }
+    .thing_fact ul li, .thing_fact ol li {
+        margin-bottom: 5px;
+    }
+    #map h2 {
+        margin: 0 0 10px;
+    }
+    #map {
+        width: 85%;
+        height: 500px;
+    }
+    #map iframe {
+        margin: 10px auto 20px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for families.html, genera.html & species.html */
+.families, .genera, .species {
+    position: relative;
+    height: 200px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+/** Pseudo-element of .families, .genera, and .species to set background images and their opacity without affecting the headings **/
+.families::before, .genera::before, .species::before {
+    position: absolute;
+    top: 0px; right: 0px; bottom: 0px; left: 0px;
+    content: "";
+    background-size: cover;
+    opacity: 0.3;
+}
+.families::before {
+    background-image: url('../photos/families/families.jpg');
+    /** image obtained from https://flowerpowerdaily.com/wp-content/uploads/2019/09/Horizontal-flower-grid.jpg **/
+}
+.genera::before {
+    background-image: url('../photos/genera/genera.jpg');
+    /** image obtained from https://c0.wallpaperflare.com/preview/652/943/804/close-up-fresh-freshness-garden.jpg **/
+}
+.species::before {
+    background-image: url('../photos/species/species.jpg');
+    /** image obtained from https://images7.alphacoders.com/795/795336.jpg **/
+}
+/* CSS for headers of families, genera, species */
+.families h1, .genera h1, .species h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+.families p, .genera p, .species p {
+    text-align: center;
+}
+/* CSS for header of each family and genera for their respective genera and species */
+.families-header, .genera-header {
+    background-color: #168665;
+    margin: 20px 10px 0 10px;
+    padding: 10px 20px;
+}
+.families-header h1, .genera-header h1{
+    display: inline;
+    text-align: left;
+    color: white;
+    font-size: 40px;
+}
+.families-container, .genera-container, .species-container,
+.genera-container-bottom, .species-container-bottom {
+    border: 3px solid #168665;
+    height: 400px;
+    margin: 0 10px 10px 10px;
+    background-color: #cfdfd7;
+    display: flex;
+}
+.genera-container, .species-container {
+    border-bottom: none;
+    margin: 0 10px;
+}
+.families-img, .genera-img, .species-img {
+    width: 32%;
+    margin: 20px;
+}
+.families-img img, .genera-img img, .species-img img {
+    width: 100%;
+}
+.families-img figcaption, .genera-img figcaption, .species-img figcaption {
+    text-align: center;
+}
+.families-info, .genera-info, .species-info {
+    width: 65%;
+    height: 100%;
+    padding: 20px;
+}
+.families-info h2, .genera-info h2, .species-info h2 {
+    font-size: 40px;
+    margin: 0;
+}
+.families-info>p, .genera-info>p, .species-info>p {
+    text-align: justify;
+    margin: 10px 0 20px 0;
+    line-height: 1.5;
+}
+/* Make sure buttons and add-infor for plants are displayed flex */
+.flex {
+    display: flex;
+    height: 50%;
+}
+ /* Styles for families, genera and species buttons */ 
+.plant-buttons p { 
+    width: 170px;
+    margin: 10px 10px 0 0;
+}
+.plant-buttons p a { 
+    display: flex;
+    min-width: 100%;
+    text-decoration: none;
+}
+/* CSS for aside elements */
+.add-info {
+    width: 100%;
+    background-color: #fffff1;
+    border: 2px solid #168665;
+    padding: 10px;
+    margin: 0 0 0 55%;  
+}
+/* Continuous readjustments of elements in order to adapt to all screen sizes  */
+@media(max-width: 1500px) {
+    .families-info h2, .genera-info h2, .species-info h2 {
+        font-size: 35px;
+    }
+    .add-info {
+        margin: 0 0 0 45%;
+    }
+    .flex {
+        height: 45%;
+    }
+}
+@media(max-width: 1300px) {
+    .families-info h2, .genera-info h2, .species-info h2 {
+        font-size: 30px;
+    }
+    .families-container, .genera-container, .species-container,
+    .genera-container-bottom, .species-container-bottom {
+        height: 340px;
+    }
+    .families-img figcaption, .genera-img figcaption, .species-img figcaption {
+        font-size: 13px;
+    }
+    .families-info>p, .genera-info>p, .species-info>p {
+        line-height: 1.3;
+        font-size: 15px;
+    }
+    .flex {
+        height: 40%;
+    }
+    .plant-buttons p {  
+        width: 140px;
+        margin: 3px 25px 0 0;
+    }
+    .plant-buttons p a { 
+        font-size: 16px;
+        padding: 10px;
+    }
+    .add-info {
+        margin: 0 0 0 35%;
+        font-size: 15px;
+    }
+}
+@media(max-width: 1200px) {
+    .families-container, .genera-container, .species-container,
+    .genera-container-bottom, .species-container-bottom {
+        height: 320px;
+    }
+    .flex {
+        height: 20%;
+        width: 50px;
+    }
+    .plant-buttons {
+        display: flex;
+    }
+    .plant-buttons p {  
+        width: 140px;
+        margin: 0 25px 0 0;
+    }
+    .plant-buttons p a { 
+        font-size: 16px;
+        padding: 10px;
+        margin: 0;
+    }
+    .add-info {
+        display: none;
+    }
+}
+/* Mobile view adjustments */
+@media(max-width: 700px) {
+    .families h1, .genera h1, .species h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    .families-header, .genera-header {
+        padding: 5px 20px;
+    }
+    .families-header h1, .genera-header h1{
+        font-size: 25px;
+    }
+    .families-container, .genera-container, .species-container,
+    .genera-container-bottom, .species-container-bottom {
+        height: 300px;
+        margin: 0 10px;
+        display: inline-block;
+    }
+    .families-container {
+        margin: 0 10px 10px 10px;
+    }
+    .families-img, .genera-img, .species-img {
+        width: 50%;
+        margin: 0;
+        position: absolute;
+        right: 20px;
+        margin-top: 10px;
+    }
+    .families-img img, .genera-img img, .species-img img {
+        width: 100%;
+        display: none;
+        position: absolute;
+        margin-top: 20px;
+    }
+    .families-img:hover img, .genera-img:hover img, .species-img:hover img { 
+        /*Display plant img only during mouseover to save space*/
+        display: block;
+    }
+    .families-img figcaption, .genera-img figcaption, .species-img figcaption {
+        font-size: 13px;
+        text-align: right;
+        text-decoration: underline;
+    }
+    .families-info, .genera-info, .species-info {
+        width: 100%;
+        padding: 20px 20px;
+    }
+    .families-info h2, .genera-info h2, .species-info h2 {
+        font-size: 20px;
+    }
+    .families-info>p, .genera-info>p, .species-info>p {
+        font-size: 13px;
+    }
+    .plant-buttons {
+        width: 250px; 
+    }
+    .plant-buttons p a { 
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for contributor.html */
+#contributor, #enhancement { /*Reuse the same styles for enhancement1.html */
+    margin: 130px auto;
+}
+#contributor h1, #enhancement h1 {
+    text-align: center;
+    font-size: 45px;
+}
+/*Set two plant card per row inside the big container*/
+.flip_card_container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
+}
+.flipCard {
+    margin: 1% 2% 1% 2%;
+    text-align: center;
+}
+/* This container positions the front and back side */
+.flipCard_inner {
+    width: 500px;
+    height: 500px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+/* Do a horizontal flip when user mouseover the profile card */
+.flipCard:hover .flipCard_inner {
+    transform: rotateY(180deg);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /*Add shadow*/
+    border-radius: 10px;
+}
+/* Position the front and back side */
+.flipCard_inner > div {
+    background-color: #cfdfd7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+/* Make sure the back side content shows only during mouseover */
+.flipCard_back {
+    transform: rotateY(180deg);
+}
+.name_of_plant{
+    font-size: 17px;
+    font-weight: 600;
+    height: 90px;
+    border-radius: 0 0 10px 10px;
+    background-color: #168665;
+    color: white;
+    line-height: 25px;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3);           
+}
+.name_of_plant dt,
+.name_of_plant dd {
+    display: inline-block;
+    height: 100%;
+    padding: 22px 10px;
+    width: 49%;
+}
+.name_of_plant dt {
+    border-right: 0.1px groove #cfdfd7;
+}
+/* Styles for contributors' profile pic*/
+.person_pic{
+    position: relative;
+    width:50%;
+    height:45%;
+    margin:10% auto 2% auto;
+    border-radius:100%;
+    padding: 4px;
+    border: 4px solid #168665;
+}
+h2.person_name{
+    font-weight:bold;
+    font-size:28px;
+    margin-bottom: 8px;
+}
+/* To add margins to the date of publication  */
+h2.person_name+p+p {
+    margin: 15px 15px 29px 15px;
+}
+/* Adjust the position of the plant images */
+.image_container{
+    width: 500px;
+    padding-top:8%;
+}
+.image_container figure{
+    width: 220px;
+    display:inline-block;
+}
+/*Styling image size of plant image*/
+.plant_img{
+    width:200px;
+    height:200px;
+}
+.image_container figcaption{
+    font-size: 13px;
+}
+.plant_description{
+    font-size:15px;
+    text-align:justify;
+    margin:5% 8% 8% 8%;
+}
+.plant_description ul, .plant_description ol {
+    font-size: 15px;
+    text-align:left;
+    margin:4%;
+}
+.user_comment{
+    text-align: center;
+    font-weight:bold;
+    font-size: 20px;
+}
+/* Styles for the user comment icons */
+.user_comment img {
+    position: relative;
+    top:1px;
+    margin-right: 4px;
+    width: 18px;
+    filter: brightness(0.1);
+}
+.buttons {
+    width: 100%;
+    margin-top: 7%;
+    text-align: center;
+}
+.buttons span {
+    opacity: .5;
+    margin: 0 30px 0 30px;
+}
+.buttons span:hover {
+    opacity: 1;
+    font-weight: bold;
+}
+/* Styles for the like, share, comment icons */
+.buttons span img{
+    width:23px; 
+    vertical-align: middle;
+    height:23px;
+    position: relative;
+    top: -2px;
+    left: -4px;
+}
+/* Styles for like button to match the other two */
+.buttons .like_button{
+    width:25px; 
+    height:25px;
+}
+/* Mobile view adjustments */
+@media(max-width:900px) {
+    #contributor {
+        margin-bottom: 0;
+    }
+    #contributor h1 {
+        font-size: 30px;
+    }
+    .flip_card_container{
+        display: inline-block;
+        margin: 0 auto;
+    }
+    .flipCard {
+        margin: 0 15%;
+        margin-bottom: 20%;
+    }
+    .flipCard_inner {
+        width: 350px;
+        height: 350px;
+    }
+    .person_pic{
+        margin:5% auto 1% auto;
+        border: 3px solid #168665;
+    }
+    h2.person_name{
+        font-size:20px;
+        margin-bottom: 3px;
+    }
+    h2.person_name+p+p {
+        margin: 7px 0 19px 0;
+    }
+    .name_of_plant{
+        font-size: 12px;
+        font-weight: 400;
+        height: 80px;
+        line-height: 20px;       
+    }
+    .name_of_plant dt,
+    .name_of_plant dd {
+        padding: 22px 0;
+    }
+    .image_container{
+        width: 360px;
+        padding-top:8%;
+    }
+    .image_container figure{
+        width: 150px;
+    }
+    .plant_img{
+        width:130px;
+        height:130px;
+    }
+    .image_container figcaption{
+        font-size: 10px;
+    }
+    .plant_description{
+        font-size:11px;
+        margin:4%;
+    }
+    .plant_description ul, .plant_description ol {
+        font-size: 11px;
+    }
+    .user_comment{
+        font-weight:400;
+        font-size: 15px;
+    }
+    .user_comment img {
+        top:1px;
+        margin-right: 4px;
+        width: 12px;
+    }
+    .buttons {
+        width: 100%;
+        margin-top: 5%;
+    }
+    .buttons span img{
+        width:15px; 
+        height:15px;
+    }
+    .buttons .like_button{
+        width:17px; 
+        height:17px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for enquiry.html */
+#enquiry_form {
+    position: relative;
+    width: 60%;
+    height: 106vh;
+    max-height: 800px;
+    background-color: #fffff1;
+    display: flex;
+    padding: 0;
+    margin: 150px auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+#enquiry_form img {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    object-fit:cover;
+}
+#form_content {
+    width: 50%;
+    height: 100%;
+    padding: 25px;  
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+#form_content h1, .signin_form h1  {
+    font-size: 28px;
+    text-align: center;
+}
+#form_content legend, #form_content label {
+    font-size: 16px;
+    font-weight: bold;
+}
+#form_content legend {
+    padding: 2px;
+    margin-left: calc(50% - 35px - 8px);
+}
+#form_content fieldset {
+    margin: 2vh 0;
+}
+#form_content p.label, .signin_form p.label {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+#firstName, #lastName {
+    width: 49%;
+}
+#email, table tr td input, #state, #phoneNumber, #plant, textarea, #form_content table, #password {
+    width: 100%;
+}   
+#state, #plant {
+    height: 28px;
+    border: 1px solid black;
+}
+textarea {
+    border: 1px solid black;
+    resize: none;
+}
+input, #state, #plant, textarea {
+    border-radius: 4px;
+    padding: 4px;
+}
+input:focus, textarea:focus {
+    border: 3px dotted #168665;
+}
+#form_content table {
+    padding: 20px;
+}
+#form_content table tr td {
+    padding: 5px 0;
+}
+#form_content .buttons, .signin_form .buttons {
+    margin-top: 18px;
+    text-align: center;
+}
+#form_content input[type="submit"], #form_content input[type="reset"],
+.signin_form input[type="submit"], .signin_form input[type="reset"], 
+.search_button { /*Same styles reused for search_button from identify.html */
+    padding: 10px 20px;
+    border: 0;
+    background-color: #168665;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+#form_content input[type="reset"], .signin_form input[type="reset"]{
+    margin-left: 10px;
+}
+#form_content input[type="submit"]:hover, #form_content input[type="reset"]:hover,
+.signin_form input[type="submit"]:hover, .signin_form input[type="reset"]:hover, 
+.search_button:hover { /*Same styles reused for search_button from identify.html */
+    padding: 11px 21px;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+/* To resize the elements in the form accordingly as well as to remove the image  */
+@media(max-width:900px) {
+    #enquiry_form {
+        width: 85%;
+        display: inline-block;
+        margin: 130px 40px;
+    }
+    #enquiry_form img {
+        display: none;
+    }
+    #form_content {
+        width: 100%;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for enhancement1.html */
+#enhancement {
+    width: 100vw;
+    height: 400vh;
+}
+#enhancement_content {
+    position: relative;
+    width: 85%;
+    height: 200vh;
+    margin: 40px auto;
+}
+#enhancement_content .item {
+    width: 100%;
+    height: auto;
+    padding: 60px 80px;
+    background-color: #cfdfd7;
+    margin-bottom: 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+}
+#enhancement_content .item h2 {
+    font-size: 25px;
+    text-align: center;
+}
+#enhancement_content .item h3 {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    clear:both;
+}
+#enhancement_content .item ul li, .identify_container ul li {
+    position: relative;
+    left: 14px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+#enhancement_content .item ol li {
+    float: left;
+    list-style-type: none;
+    margin: 15px 10px 30px 0;
+}
+#enhancement_content .item ol li a {
+    text-decoration: none;
+}
+#enhancement_content .item p.reference {
+    margin: 0;
+}
+@media(max-width:900px) {
+    #enhancement {
+        height: 440vh;
+    }
+    .identify_container ul li {
+        left: 10px;
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    #enhancement h1 {
+        font-size: 30px;
+    }
+    #enhancement_content .item {
+        padding: 30px 40px 30px 30px;
+        margin-bottom: 40px;
+    }
+    #enhancement_content .item h2 {
+        font-size: 20px;
+    }
+    #enhancement_content .item h3 {
+        font-size: 15px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    #enhancement_content .item ul li, .identify_container ul li {   
+        font-size: 15px;
+    }
+    #enhancement_content .item ol li {
+        margin: 10px 5px 15px 0;
+    }
+    #enhancement_content .item ol li a {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* CSS for profile page (x5) */
+.profile_header {
+    text-align: center;
+    line-height: 40px;
+    padding: 20px;
+    margin-top:80px;
+    color: white;
+}
+.profile_header h1 {
+    font-family: Georgia,Helvetica,Arial,sans-serif;
+    font-size: 35px;
+}
+.profile_header p {
+    font-weight: bold;
+} 
+/* Apply different background colors to each profile page header accordingly */
+#header_df {background-color: #7ea952;}
+#header_es {background-color: #ad91d4;}
+#header_mq {background-color: #edaeb4;}
+#header_jy {background-color: #84A295;}
+#header_jh {background-color: #7092b2;}
+/* Apply different font colors (RBG) to each course name labellings */
+#course_df {color:rgb(70, 113, 28);}
+#course_es {color:rgb(143, 102, 201);}
+#course_mq {color:rgb(231, 109, 140);}
+#course_jy {color:rgb(132, 162, 149);}
+#course_jh {color:rgb(67, 122, 172);}
+.profile_container {
+    max-width: 900px;
+    margin: 20px auto 20px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.profile_container>p {
+    font-weight: bold;
+    font-family: Arial,sans-serif;
+    padding-bottom: 10px; 
+    /* Set arial font to student number and other elements */
+}
+/* Different background colours for each profile page in hexadecimal are applied */
+#deron_bg1 {background-color: #d2e2c3;}
+#deron_bg2 {background-color: #f2fcb9;}
+#esther_bg1 {background-color: #d5c5d9;}
+#esther_bg2 {background-color: #ece3ef;}
+#meiqi_bg1 {background-color: #a4bbce;}
+#meiqi_bg2 {background-color: #F5F5DC;}
+#jiayi_bg1 {background-color: #EAE6DA;}
+#jiayi_bg2 {background-color: #F7F6EE;}
+#junhong_bg1 {background-color: #aed7e9;}
+#junhong_bg2 {background-color: #def2fa;}
+.profile {
+    width: 300px;
+    border: 2px groove #333; /* Apply groove border with desired color and width */
+    padding: 20px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+.profile_name {
+    font-weight: bold; /* Make the second column (name) bold */
+    font-size: 200%; /* Set font size to 200% for the name */
+    line-height: 0;
+    margin-bottom: 20px;
+}
+.profile_container table {
+    max-width: 800px;
+    margin: 20px auto;
+    width: 80%; /* Adjust the table width as needed */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Different background colours for table elements in hexadecimal are applied */
+#table_df {background-color: #46711c;}
+#table_df th {background-color: #7ea952;}
+#table_df td {background-color: #bad195;}
+#table_es {background-color: #8F66C9;}
+#table_es th {background-color: #ad91d4;}
+#table_es td {background-color: #d5c5d9;}
+#table_mq {background-color: #e76d8c;}
+#table_mq th {background-color: #edaeb4;}
+#table_mq td {background-color: #fbd7da;}
+#table_jy {background-color: #B7CDC2;}
+#table_jy th {background-color: #84A295; }
+#table_jy td {background-color: #E6E6E6;}
+#table_jh {background-color: #437aac; }
+#table_jh th {background-color: #7092b2; }
+#table_jh td {background-color: #9fc3d1;}
+/* Style for the extra information table */
+.profile_container table th {
+    text-align: center;
+    padding: 10px;
+    max-width: 200px;
+}
+.profile_container table td {
+    text-align: justify;
+    padding: 10px;
+}
+.email_button {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.email_button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+/* Apply different background colours for email me buttons from each profile page  */
+#btn_df {background-color: #7ea952;}
+#btn_es {background-color: #ad91d4;}
+#btn_mq {background-color: #edaeb4;}
+#btn_jy {background-color: #84A295;}
+#btn_jh {background-color: #7092b2;}
+.email_button span {
+    margin-right: 5px;
+    font-size: 20px;
+}
+/* Set adjustments for mobile view of profile pages */
+@media(max-width:900px) {
+    .profile_header p {
+        font-weight: 400;
+        font-size: 14px;
+    } 
+    .profile_name {
+        font-size: 150%;
+    }
+    .profile_container {
+        width: 100vw;
+        padding: 20px 0;
+    }
+    .profile_container table {
+        width:90%;
+    }
+    .profile_container table th {
+        padding: 5px;
+    }
+    .profile_container table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
